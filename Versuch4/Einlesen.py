@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 tmparray = ['1','2','3','4','5']
 
 FORMAT = pyaudio.paInt16
-SAMPLEFREQ = 44100
+SAMPLEFREQ = 44100 # 44100 Werte Die Sekunde
 FRAMESIZE = 1024
 NOFFRAMES = 220
 
@@ -34,7 +34,7 @@ for x in range(len(tmparray)):
         print('done')
         
         plt.plot(decoded)
-        plt.xlabel('Zeit (ms)')
+        plt.xlabel('Zeit (ms)') #Siehe Oben
         plt.ylabel('Frequenz (Hz)')
         plt.show()
         np.save(('Tief' + tmparray[x]),decoded) 
